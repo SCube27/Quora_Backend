@@ -6,7 +6,7 @@ const questionRouter = express.Router();
 
 // going to controllers
 questionRouter.post('/', question.postQuestion);
-questionRouter.get('/search', question.searchQuestion);
+questionRouter.get('/search', question.searchQuestions);
 questionRouter.use('/', answerRouter);
 
 module.exports = questionRouter;

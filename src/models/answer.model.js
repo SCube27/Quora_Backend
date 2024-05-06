@@ -14,7 +14,7 @@ const answerSchema = new mongoose.Schema({
         ref: "user" 
     },
     createdAt: {
-        type: mongoose.Schema.Types.Date
+        type: mongoose.Schema.Types.Date || null
     }
 });
 
