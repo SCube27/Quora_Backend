@@ -1,18 +1,34 @@
 const { StatusCodes } = require('http-status-codes');
 
+const { CommentRepository } = require('../repositories/index');
+const { CommentService } = require('../services/index');
 const { NotImplementedError } = require('../errors/index');
 
-function postCommentonAnswer(req, res, next) {
+const commentService = new CommentService(new CommentRepository());
+
+async function postCommentonAnswer(req, res, next) {
     try {
-        throw new NotImplementedError('postCommentonAnswer');
+        const newComment = await commentService.postCommentonAnswer(req.params.answerId, req.body);
+        return res.status(StatusCodes.CREATED).json({
+            success: true,
+            message: "Posted comment on answer",
+            error: {},
+            data: newComment,
+        });
     } catch (error) {
         next(error);
     }
 }
 
-function postCommentonComment(req, res, next) {
+async function postCommentonComment(req, res, next) {
     try {
-        throw new NotImplementedError('postCommentonComment');
+        const newComment = await commentService.postCommentonComment(req.params.commentId, req.body);
+        return res.status(StatusCodes.CREATED).json({
+            success: true,
+            message: "Posted comment on comment",
+            error: {},
+            data: newComment,
+        });
     } catch (error) {
         next(error);
     }
