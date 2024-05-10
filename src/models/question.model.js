@@ -19,6 +19,12 @@ const questionSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "user"
     },
+    likedBy: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "user",
+        },
+    ],
     createdAt : {
         type: mongoose.Schema.Types.Date || null
     }

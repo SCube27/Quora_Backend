@@ -16,8 +16,14 @@ const commentSchema = new mongoose.Schema({
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'user'
+        ref: "user"
     },
+    likedBy: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "user",
+        },
+    ],
     createdAt: {
         type: mongoose.Schema.Types.Date
     }
