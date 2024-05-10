@@ -4,6 +4,6 @@ const { like } = require('../../controllers');
 const likeRouter = express.Router();
 
 // going to controllers
-likeRouter.post('/:type/:id/likes', like.postLike);
+likeRouter.post('/:type/:Id/likes', like.postLike);
 
 module.exports = likeRouter;
