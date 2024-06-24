@@ -1,4 +1,4 @@
-# Quora_Backend
+# Quora_Digest
 Complete End to End Backend System for a Q&amp;A Quora / Reddit like application with all the necessary APIs to run it.
 
 ### Tech Stack Used:
