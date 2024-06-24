@@ -1,6 +1,12 @@
 # Quora_Backend
 Complete End to End Backend System for a Q&amp;A Quora / Reddit like application with all the necessary APIs to run it.
 
+### Tech Stack Used:
+1. JavaScript
+2. Node.js
+3. Express
+4. MongoDB
+
 ## How to setup the project:
 1. Clone the project
 ```
@@ -16,7 +22,7 @@ npm install
 
 4. Start the project
 ```
-npm start
+npm run start
 ```
 
 ## Service APIs and Working:
